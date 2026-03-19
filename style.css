@@ -121,6 +121,8 @@ body {
 
 .reserve-piece.selectable {
   cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .reserve-piece.selectable:hover {
@@ -203,6 +205,8 @@ body {
 
 .cell.selectable {
   cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .cell.selectable:hover {

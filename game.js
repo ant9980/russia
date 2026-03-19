@@ -150,7 +150,6 @@ function renderBoard() {
           cellEl.classList.add("selectable");
         }
 
-        cellEl.addEventListener("click", () => onBoardCellClick(row, col));
         cellEl.addEventListener("pointerup", () => onBoardCellClick(row, col));
       } else {
         cellEl.disabled = true;
@@ -199,9 +198,7 @@ function renderReserve(player, container) {
 
     if (!state.winner && isCurrentPlayer && allowed) {
       pieceButton.classList.add("selectable");
-      const handleSelect = () => onReservePieceClick(player, piece.id);
-      pieceButton.addEventListener("click", handleSelect);
-      pieceButton.addEventListener("pointerdown", handleSelect);
+      pieceButton.addEventListener("pointerdown", () => onReservePieceClick(player, piece.id));
     } else {
       pieceButton.disabled = true;
     }
