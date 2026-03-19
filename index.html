@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gobblet Gobblers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>Gobblet Gobblers</h1>
+      <p class="subtitle">3x3 보드에서 말 3개를 먼저 한 줄로 만들면 이깁니다.</p>
+    </header>
+
+    <main class="app-main">
+      <section class="play-area">
+        <aside class="reserve-panel">
+          <h2>사자 말</h2>
+          <p class="reserve-help">큰 동물은 작은 동물을 덮을 수 있어요.</p>
+          <div id="reserve-blue" class="reserve" aria-label="사자 남은 말"></div>
+        </aside>
+
+        <section class="board-panel">
+          <div class="status-panel">
+            <div id="turn-indicator" class="pill pill-turn">현재 턴: 사자</div>
+            <div id="selection-indicator" class="pill">선택된 말: 없음</div>
+          </div>
+
+          <div id="board" class="board" aria-label="Gobblet Gobblers 보드"></div>
+
+          <div class="controls">
+            <div id="message" class="message">남은 말 또는 보드 위의 내 말을 클릭하세요.</div>
+            <button id="reset-btn" class="btn-primary" type="button">새 게임 시작</button>
+          </div>
+        </section>
+
+        <aside class="reserve-panel">
+          <h2>호랑이 말</h2>
+          <p class="reserve-help">보드 위 말을 집었으면 반드시 움직여야 해요.</p>
+          <div id="reserve-orange" class="reserve" aria-label="호랑이 남은 말"></div>
+        </aside>
+      </section>
+
+      <section class="info-panel">
+        <h2>놀이 방법</h2>
+        <ul>
+          <li>내 차례에는 새 말을 놓거나, 보드 위 내 말을 다른 칸으로 옮길 수 있습니다.</li>
+          <li>큰 말은 더 작은 말 위를 덮을 수 있고, 내 말과 상대 말 모두 덮을 수 있습니다.</li>
+          <li>보드 위 말을 옮기면 밑에 숨겨진 말이 다시 나타납니다.</li>
+          <li>가로, 세로, 대각선 중 한 줄에 내 말 3개가 보이면 승리합니다.</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
+
